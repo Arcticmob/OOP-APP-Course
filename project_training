@@ -1,0 +1,34 @@
+class Workout:
+	def __init__(self, name, gain):
+		self.name = name
+		self.gain = gain
+		self.muscle_mass = 100 
+
+	def pain(self):
+		self.muscle_mass += 10
+		self.gain += 10
+		print('{} just did some pushups!'.format(self.name))
+		print('Good work {} just one more!'.format(self.name))
+
+	def rest(self):
+		self.muscle_mass -= 10
+		self.gain -= 10
+		print('{} just sat down...'.format(self.name))
+		print('NO PAIN NO GAIN!')
+
+	def __str__(self):
+		return 'Testsubject {} has gained {} units! Muscle mass is currently at {} units!'.format(self.name, self.gain, self.muscle_mass)
+
+
+jimmy = Workout('Jimmy', 0)
+qazi = Workout('Qazi', 0)
+
+jimmy.pain()
+jimmy.pain()
+print(jimmy)
+
+qazi.pain()
+qazi.rest()
+
+print(qazi)
+
